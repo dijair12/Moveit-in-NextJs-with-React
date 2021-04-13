@@ -1,18 +1,26 @@
-.container {
-    height: 100vh;
-    max-width: 992px;
-    margin: 0 auto;
-    padding: 2.5rem 2rem;
+@import '../variables.scss';
 
-    display: flex;
-    flex-direction: column;
+.bodyIs{
+    background-color: $background;
+    color: $text;
 
-    section {
-        flex: 1;
+    .container {
+        
+        height: 100vh;
+        max-width: 992px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem;
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 6.25rem;
-        align-content: center;
+        display: flex;
+        flex-direction: column;
+
+        section {
+            flex: 1;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6.25rem;
+            align-content: center;
+        }
     }
 }
