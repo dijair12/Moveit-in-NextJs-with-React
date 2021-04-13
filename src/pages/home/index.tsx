@@ -12,9 +12,16 @@ import { Profile } from '../../components/Profile';
 import { ChallengeBox } from '../../components/ChallengeBox';
 
 import styles from '../../styles/pages/Home.module.scss';
+import SideMenu from '../../components/SideMenu';
+
+interface HomeProps {
+  level: number
+  currentExperience: number
+  challengesCompleted: number
+}
 
 
-export default function Home(props) {
+export default function Home(props: HomeProps) {
   console.log(props);
 
   return (
@@ -24,6 +31,10 @@ export default function Home(props) {
         currentExperience={props.currentExperience}
         challengesCompleted={props.challengesCompleted}
       >
+        <section>
+          <SideMenu />
+        </section>
+
         <div className={styles.container}>
           <Head>
             <title>Início | move.it</title>

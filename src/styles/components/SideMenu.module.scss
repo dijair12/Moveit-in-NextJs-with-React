@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.containterSideMenu {
+  position: fixed;
+  height: 100%;
+  padding: 32px 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(254,254,254,0) 100%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .loginReturnSideMenu {
+    width: 45px;
+    height: 45px;
+  }
+
+  .boxSideMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    position: relative;
+    bottom: 25rem;
+
+    width: 100%;
+
+    .lineSideMenu{
+      background: $background-blue;
+      display: flex;
+      flex-direction: column;
+      width: 10%;
+      height: 100%;
+      position: relative;
+      right: 1.5rem;
+    }
+  }
+}

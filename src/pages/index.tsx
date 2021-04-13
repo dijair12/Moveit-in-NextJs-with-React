@@ -1,13 +1,13 @@
 import Head from 'next/head';
-import { GetServerSideProps } from 'next';
 
-import styles from '../../styles/pages/Login.module.scss';
-import { SideLogin } from '../../components/SideLogin';
-import { SideSimbol } from '../../components/SideSimbol';
+import styles from '../styles/pages/Login.module.scss';
+import { SideLogin } from '../components/SideLogin';
+import { SideSimbol } from '../components/SideSimbol';
 
 
 
 export default function Login(props) {
+
   return (
     <div className={styles.containerLogin}>
       <Head>
