@@ -1,34 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Move it
 
-## Getting Started
+O Move it é um site desenvolvido durante a Next Level Week (NLW) 4, que utiliza a técnica de pomodoro, com o objetivo de melhorar sua produtividade e foco.
 
-First, run the development server:
+Após fazer o login pelo GitHub, permita as notificações para maior imersão e inicie uma atividade na aplicação , ele irá notificar quando deverá dar um pause e realizar uma das atividades.
+
+<h1 align="center">
+  Sign in
+  <br />
+  <img alt="Moveit-Sign" title="Moveit-Sign" src="https://i.imgur.com/r9pJpML.png" />
+</h1>
+
+<h1 align="center">
+  Signed
+  <br />
+  <img alt="Moveit-Signed" title="Moveit-Signed" src="https://i.imgur.com/FWZJyyR.png" />
+</h1>
+
+<h1 align="center">
+  Home | Iniciar atividades
+  <br />
+  <img alt="Moveit-Home" title="Moveit-Home" src="https://i.imgur.com/IxrQ53x.png" />
+</h1>
+
+## Link da aplicação
+
+- [Move.It](https://moveit-next-dijair12.vercel.app/)
+- [![Website lbesson.bitbucket.io](https://img.shields.io/website-up-down-green-red/https/lbesson.bitbucket.io.svg)](https://moveit-next-dijair12.vercel.app/)
+
+
+## Tecnologias
+
+Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
+
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [JavaScript Cookie](https://github.com/js-cookie/js-cookie)
+- [Styled Components](https://styled-components.com/)
+- [SCSS](https://sass-lang.com/documentation)
+
+## Instalação e uso
 
 ```bash
-npm run dev
-# or
+# Abra o terminal e copie este repositório com o comando
+
+git clone https: https://github.com/dijair12/Moveit-in-NextJs-with-React.git
+# ou use a opção de download.
+
+# Entre na pasta web com 
+cd moveIt
+
+# Instale as dependências
+yarn install
+
+# Rode o aplicação
 yarn dev
+
+# Acesse http://localhost:3000 no seu navagador.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contato
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+[![Badge](https://img.shields.io/static/v1?label=Linkedin&message=Dijair&color=7159c1&style=for-the-badge&logo=GHOST)](https://br.linkedin.com/in/dijair-vieira-ribeiro-71368013b)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+[![Badge](https://img.shields.io/static/v1?label=GitHub&message=dijair12&color=7159c1&style=for-the-badge&logo=GHOST)](https://github.com/dijair12)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
