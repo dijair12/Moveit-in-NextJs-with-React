@@ -2,7 +2,7 @@ import { useSession, signIn, signOut } from 'next-auth/client';
 import styles from '../styles/components/SideLogin.module.scss';
 
 export function SideLogin() {
-  const [session, loading] = useSession()
+  const [session, loading] = useSession();
 
   return (
     <div className={styles.containerSideLogin}>
