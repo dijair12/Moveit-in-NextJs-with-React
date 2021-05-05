@@ -9,48 +9,49 @@ export function Countdown() {
     seconds,
     isActive,
     hasFinished,
+    percentageProgress,
     startCountdown,
-    resetCountdown
+    resetCountdown,
   } = useContext(CountdownContext);
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
-
   return (
     <div>
       <div className={styles.countdownContainer}>
-
         <div className={styles.countdownChild}>
-          <span className={styles.countdownNumbers}>{minuteLeft}</span>
-          <span className={styles.countdownNumbers}>{minuteRight}</span>
+          <span>{minuteLeft}</span>
+          <span>{minuteRight}</span>
         </div>
 
-        <span className={styles.countdownSeparator}>:</span>
+        <span>:</span>
 
         <div className={styles.countdownChild}>
-          <span className={styles.countdownNumbers}>{secondLeft}</span>
-          <span className={styles.countdownNumbers}>{secondRight}</span>
+          <span>{secondLeft}</span>
+          <span>{secondRight}</span>
         </div>
-
       </div>
 
-      { hasFinished ? (
-        <button
-          disabled
-          className={styles.countdownButton}
-        >
+      {hasFinished ? (
+        <button disabled className={styles.countdownButton}>
           Ciclo encerrado
+          <div className={styles.countdownStatusBar}>
+            <div style={{ width: '100%' }}></div>
+          </div>
         </button>
       ) : (
         <>
-          { isActive ? (
+          {isActive ? (
             <button
               type="button"
               className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
               onClick={resetCountdown}
             >
               Abandonar ciclo
+              <div className={styles.countdownStatusBar}>
+                <div style={{ width: `${percentageProgress}%` }}></div>
+              </div>
             </button>
           ) : (
             <button
@@ -63,11 +64,6 @@ export function Countdown() {
           )}
         </>
       )}
-
-
-
-
-
     </div>
-  )
+  );
 }

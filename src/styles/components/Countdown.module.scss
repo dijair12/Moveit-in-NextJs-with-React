@@ -1,44 +1,42 @@
-@import '../variables.scss';
+@import "../variables.scss";
+@import "../fontawesome/fontawesome.scss";
+@import "../fontawesome/solid.scss";
 
 .countdownContainer {
+  display: flex;
+  align-items: center;
+
+  font-family: Rajdhani;
+  font-weight: 600;
+  color: $title;
+
+  > span {
+    font-size: 6.25rem;
+    margin: 0 0.5rem;
+  }
+
+  div {
+    flex: 1;
+
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 
-    font-family: Rajdhani;
-    font-weight: 600;
-    color: $title;
+    background: $white;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    font-size: 8.5rem;
+    text-align: center;
 
-    .countdownChild {
-        flex: 1;
+    span {
+      flex: 1;
+      border-left: 1px solid #f0f1f3;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-
-        background: $white;
-        box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-        border-radius: 5px;
-        font-size: 8.5rem;
-        text-align: center;
-
-        .countdownNumbers {
-            flex: 1;
-        }
-
-        .countdownNumbers:first-child {
-            border-right: 2px solid #f8f1f3;
-        }
-
-        .conuntdownNumbers:last-child {
-            border-left: 2px solid #f8f1f3;
-        }
+      &:first-child {
+        border-right: 1px solid #f0f1f3;
+      }
     }
-
-    .countdownSeparator {
-        font-size: 6.25rem;
-        margin: 0 0.5rem;
-    }
-
+  }
 }
 
 .countdownButton {
@@ -61,24 +59,65 @@
   font-weight: 600;
 
   transition: background-color 0.5s;
-}
+  position: relative;
 
-.countdownButton:not(:disabled)hover {
-  background: $blue-dark;
-}
+  &:not(:disabled):hover {
+    background: $blue-dark;
+  }
 
-.countdownButtonActive {
-    background: $white;
-    color: $title;
-}
-
-.countdownButtonActive:not(:disabled)hover {
-    background: $red;
+  &:not(:disabled):after {
+    @extend %fa-icon;
+    @extend .fas;
+    font-size: 1rem;
+    margin-left: 1rem;
     color: $white;
-}
+    content: fa-content($fa-var-play);
+  }
 
-.countdownButton:disabled {
+  &:disabled {
     background: $white;
     color: $text;
     cursor: not-allowed;
+
+    &:after {
+      @extend %fa-icon;
+      @extend .fas;
+      margin-left: 1rem;
+      color: $green;
+      content: fa-content($fa-var-check-circle);
+    }
+  }
+}
+
+.countdownButtonActive {
+  background: $white;
+  color: $title;
+
+  &:not(:disabled):after {
+    @extend %fa-icon;
+    @extend .fas;
+    color: $title;
+    margin-left: 1rem;
+    content: fa-content($fa-var-times-circle);
+  }
+
+  &:not(:disabled):hover {
+    background: $red;
+    color: $white;
+  }
+}
+
+.countdownStatusBar {
+  width: 100%;
+  height: 4px;
+  background-color: $gray-line;
+  position: absolute;
+  bottom: 0;
+
+  div {
+    height: 4px;
+    border-radius: 4px;
+    background-color: $green;
+    transition: width 0.25s;
+  }
 }
